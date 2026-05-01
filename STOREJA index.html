@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Tienda Online</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .producto { border: 1px solid #ccc; padding: 10px; margin: 10px; }
+    .btn { background: green; color: white; padding: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a Mi Tienda</h1>
+  <div class="producto">
+    <h2>Producto 1</h2>
+    <p>Precio: $50.000 COP</p>
+    <button class="btn" onclick="comprar('Producto 1')">Comprar</button>
+  </div>
+  <script>
+    function comprar(producto) {
+      alert("Has seleccionado: " + producto);
+    }
+  </script>
+</body>
+</html>
