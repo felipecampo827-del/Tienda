@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Tienda Online</title>
-  <style>
-    body { font-family: Arial; margin: 20px; }
-    .producto { border: 1px solid #ccc; padding: 10px; margin: 10px; }
-    .btn { background: green; color: white; padding: 5px; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Mi Tienda Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; text-align: center; }
+        .producto { border: 1px solid #ccc; padding: 20px; margin: 20px auto; width: 300px; background: #fff; }
+        .btn { background-color: #0070ba; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; }
+        img { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
-  <h1>Bienvenido a Mi Tienda</h1>
-  <div class="producto">
-    <h2>Producto 1</h2>
-    <p>Precio: $50.000 COP</p>
-    <button class="btn" onclick="comprar('Producto 1')">Comprar</button>
-  </div>
-  <script>
-    function comprar(producto) {
-      alert("Has seleccionado: " + producto);
-    }
-  </script>
+    <h1>Bienvenido a Mi Tienda Online</h1>
+    <div class="producto">
+        <h2>Reloj clásico</h2>
+        <p>Precio: 70 USD</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Wristwatch.jpg" alt="Reloj clásico">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <!-- Aquí pones tu correo de PayPal -->
+            <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
+            <input type="hidden" name="item_name" value="Reloj clásico">
+            <input type="hidden" name="amount" value="70.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Comprar con PayPal" class="btn">
+        </form>
+    </div>
 </body>
 </html>
+
