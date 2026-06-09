@@ -4,77 +4,69 @@
     <meta charset="UTF-8">
     <title>Faiber Store - USA</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; text-align: center; }
-        .producto { border: 1px solid #ccc; padding: 20px; margin: 20px auto; width: 300px; background: #fff; }
-        .btn { background-color: #0070ba; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; }
+        body {
+            font-family: Arial, sans-serif;
+            background: black url('https://img.freepik.com/free-vector/money-background-dollar-bills_1017-30365.jpg') repeat;
+            color: white;
+            text-align: center;
+        }
+        h1 { color: gold; }
+        .seccion {
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid gold;
+            width: 80%;
+            background: rgba(0,0,0,0.7);
+        }
+        .producto {
+            border: 1px solid #444;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 250px;
+            background: #111;
+        }
+        .producto h2 { color: #00ffcc; }
+        .btn {
+            background-color: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
         img { max-width: 100%; height: auto; }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Faiber Store</h1>
+    <h1>💵 Faiber Store USA 💵</h1>
 
-    <!-- Producto 1: Camisa -->
-    <div class="producto">
-        <h2>Camisa elegante</h2>
-        <p>Precio: 40 USD</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa elegante">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-            <input type="hidden" name="item_name" value="Camisa elegante">
-            <input type="hidden" name="amount" value="40.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="submit" value="Comprar con PayPal" class="btn">
-        </form>
+    <!-- Sección Ropa -->
+    <div class="seccion">
+        <h2>👕 Sección Ropa</h2>
+        <div class="producto">
+            <h2>Camisa elegante</h2>
+            <p>Precio: 40 USD</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa elegante">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
+                <input type="hidden" name="item_name" value="Camisa elegante">
+                <input type="hidden" name="amount" value="40.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="submit" value="Comprar con PayPal" class="btn">
+            </form>
+        </div>
     </div>
 
-    <!-- Producto 2: Velas aromatizantes -->
-    <div class="producto">
-        <h2>Velas aromatizantes</h2>
-        <p>Precio: 25 USD</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKOzkNz9ag_JG_9jvNqjQjygpJfV1ZF00-w&s" alt="Velas aromatizantes">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-            <input type="hidden" name="item_name" value="Velas aromatizantes">
-            <input type="hidden" name="amount" value="25.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="submit" value="Comprar con PayPal" class="btn">
-        </form>
-    </div>
-
-    <!-- Producto 3: Correa de perros -->
-    <div class="producto">
-        <h2>Correa para perros</h2>
-        <p>Precio: 30 USD</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7dK0NWW7oKRNRdEmhL8i1CzS0Cicvvdso6w&s" alt="Correa para perros">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-            <input type="hidden" name="item_name" value="Correa para perros">
-            <input type="hidden" name="amount" value="30.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="submit" value="Comprar con PayPal" class="btn">
-        </form>
-    </div>
-
-    <!-- Producto 4: Crema para la cara -->
-    <div class="producto">
-        <h2>Crema facial</h2>
-        <p>Precio: 50 USD</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXxnF2gvaKXg1aayiD5dKFuGl15QIlTtBzow&s" alt="Crema facial">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-            <input type="hidden" name="item_name" value="Crema facial">
-            <input type="hidden" name="amount" value="50.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="submit" value="Comprar con PayPal" class="btn">
-        </form>
-    </div>
-
-</body>
-</html>
+    <!-- Sección Hogar -->
+    <div class="seccion">
+        <h2>🏠 Sección Hogar</h2>
+        <div class="producto">
+            <h2>Velas aromatizantes</h2>
+            <p>Precio: 25 USD</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKOzkNz9ag_JG_9jvNqjQjygpJfV1ZF00-w&s" alt="Velas aromatizantes">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 
 
 
