@@ -5,114 +5,91 @@
     <title>Faiber Store - USA</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: black; /* Fondo negro en toda la pantalla */
+            background-color: black;
             color: white;
-            margin: 0;
-            padding: 0;
             text-align: center;
+            font-family: Arial, sans-serif;
         }
-        h1 { color: gold; padding: 20px; }
-        .seccion {
-            margin: 40px auto;
-            padding: 20px;
-            width: 90%;
+        .producto img {
+            max-width: 200px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
         }
-        .producto {
-            border: 2px solid gold;
-            padding: 20px;
-            margin: 20px;
-            display: inline-block;
-            width: 250px;
-            background: rgba(0,0,0,0.9); /* Negro con leve transparencia */
+        /* Imagen ampliada */
+        #visor {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .producto h2 { color: #00ffcc; }
-        .btn {
-            background-color: gold;
+        #visor img {
+            max-width: 400px;
+            transition: transform 0.5s ease;
+        }
+        #cerrar {
+            margin-top: 20px;
+            background: gold;
             color: black;
             padding: 10px 20px;
-            border: none;
             cursor: pointer;
-            font-size: 16px;
+            border: none;
         }
-        img { max-width: 100%; height: auto; }
+        #rotar {
+            margin-top: 10px;
+            background: #00ffcc;
+            color: black;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+        }
     </style>
 </head>
 <body>
-    <h1>💵 Faiber Store USA 💵</h1>
+    <h1>Faiber Store USA</h1>
 
-    <!-- Sección Ropa -->
-    <div class="seccion">
-        <h2>👕 Sección Ropa</h2>
-        <div class="producto">
-            <h2>Camisa elegante</h2>
-            <p>Precio: 40 USD</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa elegante">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-                <input type="hidden" name="item_name" value="Camisa elegante">
-                <input type="hidden" name="amount" value="40.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="submit" value="Comprar con PayPal" class="btn">
-            </form>
-        </div>
+    <!-- Producto: Camisa -->
+    <div class="producto">
+        <h2>Camisa elegante</h2>
+        <img id="camisa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa elegante">
     </div>
 
-    <!-- Sección Hogar -->
-    <div class="seccion">
-        <h2>🏠 Sección Hogar</h2>
-        <div class="producto">
-            <h2>Velas aromatizantes</h2>
-            <p>Precio: 25 USD</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKOzkNz9ag_JG_9jvNqjQjygpJfV1ZF00-w&s" alt="Velas aromatizantes">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-                <input type="hidden" name="item_name" value="Velas aromatizantes">
-                <input type="hidden" name="amount" value="25.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="submit" value="Comprar con PayPal" class="btn">
-            </form>
-        </div>
+    <!-- Visor -->
+    <div id="visor">
+        <img id="camisaGrande" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa grande">
+        <button id="rotar">🔄 Girar</button>
+        <button id="cerrar">❌ Cerrar</button>
     </div>
 
-    <!-- Sección Mascotas -->
-    <div class="seccion">
-        <h2>🐶 Sección Mascotas</h2>
-        <div class="producto">
-            <h2>Correa para perros</h2>
-            <p>Precio: 30 USD</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7dK0NWW7oKRNRdEmhL8i1CzS0Cicvvdso6w&s" alt="Correa para perros">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-                <input type="hidden" name="item_name" value="Correa para perros">
-                <input type="hidden" name="amount" value="30.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="submit" value="Comprar con PayPal" class="btn">
-            </form>
-        </div>
-    </div>
+    <script>
+        const camisa = document.getElementById("camisa");
+        const visor = document.getElementById("visor");
+        const camisaGrande = document.getElementById("camisaGrande");
+        const cerrar = document.getElementById("cerrar");
+        const rotar = document.getElementById("rotar");
 
-    <!-- Sección Belleza -->
-    <div class="seccion">
-        <h2>💄 Sección Belleza</h2>
-        <div class="producto">
-            <h2>Crema facial</h2>
-            <p>Precio: 50 USD</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXxnF2gvaKXg1aayiD5dKFuGl15QIlTtBzow&s" alt="Crema facial">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-                <input type="hidden" name="item_name" value="Crema facial">
-                <input type="hidden" name="amount" value="50.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="submit" value="Comprar con PayPal" class="btn">
-            </form>
-        </div>
-    </div>
+        let angulo = 0;
 
+        // Abrir visor al hacer clic en la camisa
+        camisa.addEventListener("click", () => {
+            visor.style.display = "flex";
+        });
+
+        // Cerrar visor
+        cerrar.addEventListener("click", () => {
+            visor.style.display = "none";
+        });
+
+        // Rotar imagen
+        rotar.addEventListener("click", () => {
+            angulo += 90;
+            camisaGrande.style.transform = `rotate(${angulo}deg)`;
+        });
+    </script>
 </body>
 </html>
+
 
