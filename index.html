@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Tienda Online</title>
+    <title>Faiber Store - USA</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f9f9f9; text-align: center; }
         .producto { border: 1px solid #ccc; padding: 20px; margin: 20px auto; width: 300px; background: #fff; }
@@ -11,21 +11,22 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Mi Tienda Online</h1>
+    <h1>Bienvenido a Faiber Store</h1>
+
+    <!-- Producto 1: Camisa -->
     <div class="producto">
-        <h2>Reloj clásico</h2>
-        <p>Precio: 70 USD</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Wristwatch.jpg" alt="Reloj clásico">
+        <h2>Camisa elegante</h2>
+        <p>Precio: 40 USD</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB1dcj-z7LLVJAuziUdTdeCggcp7_he3tpg&s" alt="Camisa elegante">
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_xclick">
-            <!-- Aquí pones tu correo de PayPal -->
             <input type="hidden" name="business" value="TU_CORREO_PAYPAL@ejemplo.com">
-            <input type="hidden" name="item_name" value="Reloj clásico">
-            <input type="hidden" name="amount" value="70.00">
+            <input type="hidden" name="item_name" value="Camisa elegante">
+            <input type="hidden" name="amount" value="40.00">
             <input type="hidden" name="currency_code" value="USD">
             <input type="submit" value="Comprar con PayPal" class="btn">
         </form>
     </div>
-</body>
-</html>
+
+
 
